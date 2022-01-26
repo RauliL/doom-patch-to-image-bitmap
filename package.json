@@ -1,0 +1,41 @@
+{
+  "name": "doom-patch-to-image-bitmap",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Converts DOOM patch into ImageBitmap instance.",
+  "author": "Rauli Laine <rauli.laine@iki.fi>",
+  "license": "MIT",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "/dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RauliL/canvas-draw-doom-patch.git"
+  },
+  "keywords": [
+    "canvas",
+    "doom",
+    "wad"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf './dist'",
+    "prebuild": "yarn run clean",
+    "prepack": "yarn run build"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.5",
+    "yarn": "^1.22.17"
+  },
+  "dependencies": {
+    "@rauli/wad": "^0.0.3"
+  }
+}
